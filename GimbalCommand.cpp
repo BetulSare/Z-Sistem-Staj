@@ -1,5 +1,6 @@
 #include "GimbalCommand.h"
-
+#include <iostream>  
+#include <cstdio>    
 uint8_t GimbalCommand::counter = 0;
 
 std::vector<uint8_t> GimbalCommand::getPacket(uint8_t frameID, const std::vector<uint8_t>& payload) {
