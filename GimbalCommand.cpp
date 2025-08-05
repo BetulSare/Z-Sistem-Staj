@@ -25,7 +25,7 @@ std::vector<uint8_t> GimbalCommand::getPacket(uint8_t frameID, const std::vector
 
     // 5. Checkword: XOR from lenCnt to end
     std::vector<uint8_t> toCheck(packet.begin() + 3, packet.end());
-    uint8_t check = calculateCheckWord(toCheck);
+    uint8_t check = calculateCheckSum(toCheck);
     packet.push_back(check);
 
     // Paket içeriğini hex formatında ekrana yazdır
